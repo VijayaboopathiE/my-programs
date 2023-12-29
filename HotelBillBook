@@ -1,0 +1,64 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+	    int i=0;
+	    int a=0;
+	    while(i<1){
+	        System.out.println("\n\n id:0000"+(++a));
+	        int tot=0;
+	        int Idly=0;
+	        int Poori=0;
+	        int Parrota=0;
+	        int Dosa=0;
+	        char ch;
+	        
+	    do{
+	       System.out.println(" 1)Idly    - ₹5,\n 2)Pongal  - ₹10,\n 3)Parrota - ₹10,\n 4)Dosa    - ₹20.");
+	       System.out.println("Select you choice:");
+	       
+	       int b;
+	       b=s.nextInt();
+	       switch(b){
+	           case 1:
+	               System.out.println("Enter Quantity of Idly:");
+	               Idly=s.nextInt();
+	               tot+=(Idly*5);
+	               break;
+	           case 2:
+	               System.out.println("Enter Quantity of Pongal:");
+	               Poori=s.nextInt();
+	               tot+=(Poori*10);
+	               break;
+	           case 3:
+	               System.out.println("Enter Quantity of Parrota:");
+	               Parrota=s.nextInt();
+	               tot+=(Parrota*10);
+	               break;
+	           case 4:
+	               System.out.println("Enter Quantity of Dosa:");
+	               Dosa=s.nextInt();
+	               tot+=(Dosa*20);
+	               break;
+	           default:
+	           System.out.println("Invalid choice");
+	           
+	       }
+	       System.out.println("Do You Want More(y/n)");
+	       ch=s.next().charAt(0);
+	           }while(ch=='y');
+	    System.out.println("___________________BILL___________________");        
+	    System.out.println("Idly      ₹5  X"+ Idly+"\nPongal    ₹10 X"+ Poori+"\nParrota   ₹10 X"+ Parrota+"\nDosa      ₹20 X"+ Dosa);        
+		System.out.println("__________________________________________");
+		System.out.println("Total Bill:   ₹"+tot);
+		System.out.println("__________________________________________");
+		System.out.println("****************************************************************************************************");
+		System.out.println("\t Thanks For Coming \n\t  (●'◡'●)  \n\t Come Again");
+		System.out.println("****************************************************************************************************\n");
+	
+	        i--;
+	    }
+}
+
+}
