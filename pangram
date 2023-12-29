@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include<string.h>
+int main()
+{
+   char a[40];
+   scanf("%[^\n]",a);
+   int i,j,len1,count=0;
+   char b[26]="qwertyuiopasdfghjklzxcvbnm";
+   len1=strlen(a);
+   if(len1>=26){
+     for(i=0;i<26;i++){
+       
+       if(a[i]!=' '){
+         for(j=0;j<len1;j++){
+           char cp=tolower(a[j]);
+           if(b[i]==cp){
+             count++;
+             break;
+           }
+         }
+       }
+     }
+   }
+   if(count==26){
+     printf("pangram");
+   }
+   else{
+     printf("not pangram");
+   }
+}
