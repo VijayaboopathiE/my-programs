@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() {
+int a,b,n,m,i,j,count=0,count1=0,count2=0;
+    scanf("%d %d",&a,&b);
+    n=a;
+    m=b;
+    while(n!=0)
+    {
+        n=n/10;
+        count++;   }
+    while(m!=0)
+    {
+        m=m/10;
+        count1++;
+    }
+    int c[count],d[count1];
+    if(count==count1)
+    {
+        for(i=0;i<count;i++)
+        {
+           c[i]=a%10;
+            a=a/10;
+            d[i]=b%10;
+            b=b/10;
+        }
+        for(i=0;i<count;i++)
+        {
+            for(j=i+1;j<count;j++)
+            {
+                if(c[i]==d[j])
+                {d[j]=-1;
+                    count2++;
+                    break;
+                   
+                }
+                 
+            }
+        }
+    }
+    if(count2>0)
+        printf("Anagram");
+    else
+        printf("Not");
+    return 0;
+}
