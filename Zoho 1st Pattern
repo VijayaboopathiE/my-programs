@@ -1,0 +1,53 @@
+import java.util.*;
+
+public class Main {
+  
+    public static void main(String[] args) {
+      
+      Scanner s=new Scanner(System.in);
+      
+      String str=s.next();
+      
+      int n=(str.length()*2)-1;
+  
+      int n1=str.length()-1;
+      
+      for(int i=0;i<n1;i++){
+          
+        for(int j=0;j<n;j++){
+          
+          if(j==i||(i+j)==(n-1)){
+            
+            System.out.print(" "+str.charAt(i));
+          }
+          
+          else{
+            
+            System.out.print("  ");
+          }
+        }
+        
+        System.out.println();
+      }
+      
+      for(int i=n1;i<n;i++){
+          
+        for(int j=0;j<n;j++){
+          
+          if(j==i||(i+j)==(n-1)){
+            
+            System.out.print(" "+str.charAt(n1));
+          }
+          
+          else{
+            
+            System.out.print("  ");
+          }
+        }
+        
+        n1--;
+        
+        System.out.println();
+      }
+  }
+}
