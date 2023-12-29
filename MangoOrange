@@ -1,0 +1,12 @@
+#include<stdio.h>
+int main(){
+int r,c,t;
+scanf("%d%d%d",&r,&c,&t);
+if(t<=c||t%c==0||t%c==1||t>=(r*c-c)){
+  printf("Mango");
+}
+else{
+  printf("Orange");
+}
+}
+
